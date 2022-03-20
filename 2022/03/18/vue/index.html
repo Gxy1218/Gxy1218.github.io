@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="组件配置属性##一、ref的属性 123451. 被用来给元素或子组件注册引用信息（id的替代者）2. 应用在html标签上获取的是真是DOM元素，应用在组件标签上是组件实例对象（vc）3. 使用方式：	 打标识：&lt;h1 ref&#x3D;&quot;xxx&quot;&gt;....&lt;&#x2F;h1&gt;或&lt;School ref&#x3D;&quot;xxx&quot;&gt;&lt;&#x2F;School&amp;">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Hexo">
+<meta property="og:url" content="https://gxy1218.github.io/2022/03/18/vue/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="组件配置属性##一、ref的属性 123451. 被用来给元素或子组件注册引用信息（id的替代者）2. 应用在html标签上获取的是真是DOM元素，应用在组件标签上是组件实例对象（vc）3. 使用方式：	 打标识：&lt;h1 ref&#x3D;&quot;xxx&quot;&gt;....&lt;&#x2F;h1&gt;或&lt;School ref&#x3D;&quot;xxx&quot;&gt;&lt;&#x2F;School&amp;">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2022-03-18T00:57:34.622Z">
+<meta property="article:modified_time" content="2022-03-20T04:17:10.428Z">
+<meta property="article:author" content="Gxy">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+<meta name="generator" content="Hexo 5.4.1"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://Gxy1218.github.io"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-vue" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2022/03/18/vue/" class="article-date">
+  <time datetime="2022-03-18T00:57:34.622Z" itemprop="datePublished">2022-03-18</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <hr>
+<h2 id="组件配置属性"><a href="#组件配置属性" class="headerlink" title="组件配置属性"></a>组件配置属性</h2><p>##一、ref的属性</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">1.</span> 被用来给元素或子组件注册引用信息（id的替代者）</span><br><span class="line"><span class="number">2.</span> 应用在html标签上获取的是真是<span class="variable constant_">DOM</span>元素，应用在组件标签上是组件实例对象（vc）</span><br><span class="line"><span class="number">3.</span> 使用方式：</span><br><span class="line">	 打标识：&lt;h1 ref=<span class="string">&quot;xxx&quot;</span>&gt;....&lt;<span class="regexp">/h1&gt;或&lt;School ref=&quot;xxx&quot;&gt;&lt;/</span><span class="title class_">School</span>&gt;</span><br><span class="line">	 获取：<span class="variable language_">this</span>.<span class="property">$refs</span>.<span class="property">xxx</span></span><br></pre></td></tr></table></figure>
+<p>##二、props配置项<br>####功能：让组件接收外部传过来的数据</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">1.</span> 传递数据：</span><br><span class="line">     &lt;<span class="title class_">Demo</span> name=<span class="string">&quot;xxx&quot;</span>/&gt; </span><br><span class="line"><span class="number">2.</span> 接收数据：</span><br><span class="line"></span><br><span class="line">	简单的声明：</span><br><span class="line">		props：[<span class="string">&#x27;name&#x27;</span>,<span class="string">&#x27;age&#x27;</span>,<span class="string">&#x27;sex&#x27;</span>]</span><br><span class="line">	接收的同时对数据的类型进行限制：</span><br><span class="line"></span><br><span class="line">		 <span class="attr">props</span>:&#123;</span><br><span class="line">				<span class="attr">name</span>:<span class="title class_">String</span>,</span><br><span class="line">				<span class="attr">age</span>:<span class="title class_">Number</span>,</span><br><span class="line">				<span class="attr">sex</span>:<span class="title class_">String</span></span><br><span class="line">				&#125;</span><br><span class="line"> 	接收的同时对数据：进行类型限制+默认值的指定+必要性限制</span><br><span class="line">	    <span class="attr">props</span>:&#123;</span><br><span class="line">		    <span class="attr">name</span>:&#123;</span><br><span class="line">			    <span class="attr">type</span>:<span class="title class_">String</span>,   <span class="comment">//name的类型是字符串</span></span><br><span class="line">			    <span class="attr">required</span>:ture  <span class="comment">//name是必要的</span></span><br><span class="line">		    &#125;,</span><br><span class="line">		    <span class="attr">age</span>:&#123;</span><br><span class="line">			    <span class="attr">type</span>:<span class="title class_">Number</span>,</span><br><span class="line">			    <span class="attr">default</span>:<span class="number">99</span>		<span class="comment">//默认值</span></span><br><span class="line">			    &#125;,</span><br><span class="line">		    <span class="attr">sex</span>:&#123;</span><br><span class="line">			    <span class="attr">type</span>:<span class="title class_">String</span>,</span><br><span class="line">			    <span class="attr">required</span>:ture</span><br><span class="line">			    &#125;</span><br><span class="line">	         &#125; </span><br></pre></td></tr></table></figure>
+<p><strong>备注：props是只读的，Vue底层会监测你对props的修改，如果进行了修改，就会发出警告，若业务需求需要修改，那么请复制props的内容到data中一份，然后去修改data中的数据</strong></p>
+<p>##三、mixin(混入)<br>####功能：可以把多个组件共用的配置提取成一个对象 </p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">使用方式：   </span><br><span class="line">第一步定义混入，例如：   </span><br><span class="line">    &#123;  </span><br><span class="line">    <span class="title function_">data</span>(<span class="params"></span>)&#123;...&#125;,  </span><br><span class="line">    <span class="attr">methods</span>:&#123;...&#125;  </span><br><span class="line">    ...  </span><br><span class="line">    &#125;  </span><br><span class="line">第二步使用混入，例如：  </span><br><span class="line">(<span class="number">1</span>). 全局混入：<span class="string">`Vue.mixin(xxx)`</span>    </span><br><span class="line">(<span class="number">2</span>). 局部混入：<span class="string">`mixin:[&#x27;xxx&#x27;]`</span>   </span><br></pre></td></tr></table></figure>
+<p>##四、插件<br>####功能：用于增强Vue<br>####本质：包含install方法的一个对象，install的第一个参数是Vue，第二个以后的参数是插件使用者传递的数据     </p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line">定义插件:     </span><br><span class="line">    <span class="title function_">install</span>(<span class="params">Vue</span>) &#123;</span><br><span class="line">    <span class="comment">//全局过滤器</span></span><br><span class="line">    <span class="title class_">Vue</span>.<span class="title function_">filter</span>(<span class="string">&#x27;mySlice&#x27;</span>, <span class="keyword">function</span>(<span class="params">value</span>) &#123;</span><br><span class="line">            <span class="keyword">return</span> value.<span class="title function_">slice</span>(<span class="number">0</span>, <span class="number">4</span>)</span><br><span class="line">        &#125;)</span><br><span class="line">        <span class="comment">//定义全局自定义指令</span></span><br><span class="line">    <span class="title class_">Vue</span>.<span class="title function_">directive</span>(<span class="string">&#x27;fbind&#x27;</span>, &#123;</span><br><span class="line">            <span class="comment">//指令与元素绑定成功时</span></span><br><span class="line">            <span class="title function_">bind</span>(<span class="params">element, binding</span>) &#123;</span><br><span class="line">                element.<span class="property">value</span> = binding.<span class="property">value</span></span><br><span class="line">            &#125;,</span><br><span class="line">            <span class="comment">//指令元素被插入页面时</span></span><br><span class="line">            <span class="title function_">inserted</span>(<span class="params">element, binding</span>) &#123;</span><br><span class="line">                element.<span class="title function_">focus</span>()</span><br><span class="line">            &#125;,</span><br><span class="line">            <span class="comment">//指令模板被重新解析时</span></span><br><span class="line">            <span class="title function_">update</span>(<span class="params">element, binding</span>) &#123;</span><br><span class="line">                element.<span class="property">value</span> = binding.<span class="property">value</span></span><br><span class="line">            &#125;</span><br><span class="line">        &#125;)</span><br><span class="line">        <span class="comment">//定义混入</span></span><br><span class="line">    <span class="title class_">Vue</span>.<span class="title function_">mixin</span>(&#123;</span><br><span class="line">            <span class="title function_">data</span>(<span class="params"></span>) &#123;</span><br><span class="line">                <span class="keyword">return</span> &#123;</span><br><span class="line">                    <span class="attr">x</span>: <span class="number">200</span>,</span><br><span class="line">                    <span class="attr">y</span>: <span class="number">300</span></span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;)</span><br><span class="line">        <span class="comment">//给vue原型上添加一个方法</span></span><br><span class="line">    <span class="title class_">Vue</span>.<span class="property"><span class="keyword">prototype</span></span>.<span class="property">hello</span> = <span class="function">() =&gt;</span> &#123; <span class="title function_">alert</span>(<span class="string">&#x27;你好&#x27;</span>) &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line">使用插件：<span class="title class_">Vue</span>.<span class="title function_">use</span>(插件名)  </span><br></pre></td></tr></table></figure>
+
+<p>##五、scoped样式</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">作用：让样式局部生效，防止冲突  </span><br><span class="line">写法：&lt;style scoped&gt;</span><br></pre></td></tr></table></figure>
+
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://gxy1218.github.io/2022/03/18/vue/" data-id="cl0yrs6nq000080us8e6t906j" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2022/03/20/for%E5%BE%AA%E7%8E%AF/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          (no title)
+        
+      </div>
+    </a>
+  
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/03/">March 2022</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2022/03/20/for%E5%BE%AA%E7%8E%AF/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2022/03/18/vue/">(no title)</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2022 Gxy<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+  
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+  </div>
+</body>
+</html>
